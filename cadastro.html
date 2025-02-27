@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <div class="form">
+        <h1>Criar uma conta</h1>
+        <form>
+            <input type="text" id="usuario" placeholder="Crie um usuario" required>
+            <input type="password" id="nova-senha" placeholder="Nova senha" required>
+            <input type="password" id="confirma-senha" placeholder="Confirme a senha" required>
+            <i class="bi bi-eye"></i>
+                
+            </label>
+            <button type="submit" id="botao" onclick="cadastro(); return false">Confirmar</button>
+        </form>
+    </div>
+
+    <script src="cadastro.js"></script>
+</body>
+</html>

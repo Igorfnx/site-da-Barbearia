@@ -1,0 +1,61 @@
+body {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, rgb(0, 92, 97), rgb(1, 70, 17), rgb(24, 24, 24));
+    margin: 0;
+}
+
+h1 {
+    color: white;
+    text-decoration-line: underline;
+}
+
+.form {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(248, 243, 243, 0.5);
+    width: 90%;
+    max-width: 400px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+input, button {
+    width: 85%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid;
+    border-radius: 5px;
+    box-shadow: 0 0 5px;
+}
+
+button {
+    padding: 15px;
+    margin: 15px;
+    background-color: darkgreen;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(1, 54, 1);
+}
+
+.mostrar-senha-label {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    margin-bottom: 2px;
+    color: white;
+    
+}
+
+.mostrar-senha-label input {
+    margin-right: px;
+}

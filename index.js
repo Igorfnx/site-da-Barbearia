@@ -7,7 +7,7 @@ function validLogin() {
     // verifica se as senhas são diferentes;
     if (user == "igor" && senha == "igor") {
         alert("sucesso!!!");
-        location.href = "index.html"
+        location.href = "agendamento.html"
 
     } if(user == "gilson" && senha == "gilson"){
         alert("sucesso!!!");

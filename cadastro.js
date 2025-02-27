@@ -22,7 +22,7 @@ function cadastro() {
     localStorage.setItem("nova-senha", senha);
 
     // Faz com que ao concluir o processo, mude de página. No caso, vai para a página de login
-    location.href = "login.html";
+    location.href = "index.html";
 }
 
 document.getElementById('mostrar-senha').addEventListener('change', function() {

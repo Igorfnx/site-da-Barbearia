@@ -19,23 +19,42 @@ function cadastro() {
 
     // Salva as informações dos campos no localStorage
     localStorage.setItem("usuario", user);
-    localStorage.setItem("nova-senha", senha);
+    localStorage.setItem("senha", senha);
 
     // Faz com que ao concluir o processo, mude de página. No caso, vai para a página de login
     location.href = "index.html";
 }
 
-document.getElementById('mostrar-senha').addEventListener('change', function() {
-    const novaSenha = document.getElementById('nova-senha');
-    const confirmaSenha = document.getElementById('confirma-senha');
-    if (this.checked) {
-        novaSenha.type = 'text';
-        confirmaSenha.type = 'text';
+function togglePasswordVisibility(id) {
+    const input = document.getElementById(id);
+    if (input.type === 'password') {
+        input.type = 'text';
     } else {
-        novaSenha.type = 'password';
-        confirmaSenha.type = 'password';
+        input.type = 'password';
     }
-});
+}
 
+function validLogin() {
+    let user = document.getElementById("usuario").value;
+    let senha = document.getElementById("senha").value;
+
+    // Recupera os dados do localStorage
+    let storedUser = localStorage.getItem("usuario");
+    let storedSenha = localStorage.getItem("senha");
+
+    // Verifica se as credenciais são válidas
+    if ((user === "igor" && senha === "igor") || (user === "gilson" && senha === "gilson") || (user === storedUser && senha === storedSenha)) {
+        alert("sucesso!!!");
+        if (user === "gilson" && senha === "gilson") {
+            location.href = "agenda.html";
+        } else {
+            location.href = "agendamento.html";
+        }
+    } else {
+        alert("usuario ou senha estão incorretos!");
+        document.getElementById("usuario").value = "";
+        document.getElementById("senha").value = "";
+    }
+}
 
 
